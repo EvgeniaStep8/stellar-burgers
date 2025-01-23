@@ -6,3 +6,14 @@
 .container {
     width: 600px;
 }
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

@@ -8,13 +8,13 @@
 
 .btn {
     flex: 1 0 0;
-    border-bottom: 2px solid #2F2F37;
-    color: #8585AD;
+    border-bottom: 2px solid var(--background-element);
+    color: var(--text-inactive-color);
     
 }
 
 .active {
-    border-bottom: 2px solid #4C4CFF;
+    border-bottom: 2px solid var(--colors-interface-accent);
     color: #F2F2F3;
 }
 

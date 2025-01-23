@@ -1,5 +1,5 @@
 .header {
-    background-color: #1C1C21;
+    background-color: var(--background);
 }
 
 .headerContainer {
@@ -16,12 +16,4 @@
 .item {
     display: flex;
     align-items: center;
-}
-
-.itemName {
-    color: #8585AD;
-}
-
-.active {
-    color: #F2F2F3;
 }

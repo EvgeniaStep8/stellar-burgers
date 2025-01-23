@@ -3,13 +3,15 @@ import clsx from 'clsx';
 import styles from './burger-ingredients.module.scss';
 import { BurgerIngredientType } from '../../shared/types';
 import { BurgerIngredient } from '../burger-ingredient/burger-ingredient';
-import { Modal } from '../../shared/modal/modal';
+import { Tab } from '@ya.praktikum/react-developer-burger-ui-components';
 
 type BurgerIngredientsProps = {
     ingredients: BurgerIngredientType[];
 }
 
 export const BurgerIngredients: FC<BurgerIngredientsProps> = ({ ingredients }) => {
+    const [current, setCurrent] = useState('bun');
+
     const getIngredientsByType = (type: string) =>  {
         return ingredients.filter((item) => item.type === type);
     }
@@ -17,9 +19,9 @@ export const BurgerIngredients: FC<BurgerIngredientsProps> = ({ ingredients }) =
 	return (
 		<div className={clsx(styles.burgerIngredients, 'mr-10')}>
             <nav className={clsx(styles.nav, 'mb-10')}>
-                <button className={clsx(styles.btn, 'pt-4', 'pb-4', 'text', 'text_type_main-default', styles.active)}>Булки</button>
-                <button className={clsx(styles.btn, 'pt-4', 'pb-4', 'text', 'text_type_main-default')}>Соусы</button>
-                <button className={clsx(styles.btn, 'pt-4', 'pb-4', 'text', 'text_type_main-default')}>Начинки</button>
+                <Tab value="bun" active={current === 'bun'} onClick={setCurrent}>Булки</Tab>
+                <Tab value="sauce" active={current === 'sauce'} onClick={setCurrent}>Соусы</Tab>
+                <Tab value="main" active={current === 'main'} onClick={setCurrent}>Начинки</Tab>
             </nav>
             <div className={styles.container}>
                 <section>

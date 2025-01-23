@@ -1,8 +1,9 @@
 import { FC, useState } from "react";
-import { ConstructorElement, CurrencyIcon, Button } from "@ya.praktikum/react-developer-burger-ui-components";
+import styles from './burger-constructor.module.scss';
+import clsx from "clsx";
+import { ConstructorElement, CurrencyIcon, Button, DragIcon } from "@ya.praktikum/react-developer-burger-ui-components";
 import { Modal } from "../../shared/modal/modal";
 import { BurgerAddedIngredientsType } from "../../shared/types";
-import styles from './burger-constructor.module.scss';
 import { OrderDetails } from "../order-details/order-details";
 
 type BurgerConstructorProps = {
@@ -26,25 +27,29 @@ export const BurgerConstructor: FC<BurgerConstructorProps>  = ({ ingredients }) 
     }
 
     return (
-        <div className={styles.container}>
+        <div className={clsx(styles.container, "mr-4 ml-4")}>
           <ConstructorElement
             type="top"
             isLocked={true}
             text={`${ingredients.bun.name} (верх)`}
             price={ingredients.bun.price}
             thumbnail={ingredients.bun.image}
-            extraClass="mb-4"
+            extraClass="mb-4 ml-8"
           />
           <div className={styles.scrollBar}>
             {ingredients.filling.map((ingredient) => {
               return (
-                <ConstructorElement
-                  text={ingredient.name}
-                  price={ingredient.price}
-                  thumbnail={ingredient.image}
-                  key={ingredient._id}
-                  extraClass="mb-4"
-                />
+                <div key={ingredient._id} className={styles.item}>
+                  <button>
+                    <DragIcon type="primary" />
+                  </button>
+                  <ConstructorElement
+                    text={ingredient.name}
+                    price={ingredient.price}
+                    thumbnail={ingredient.image}
+                    extraClass="mb-4 ml-2"
+                  />
+                </div>
               );
             })}
           </div>
@@ -54,8 +59,9 @@ export const BurgerConstructor: FC<BurgerConstructorProps>  = ({ ingredients }) 
             text={`${ingredients.bun.name} (низ)`}
             price={ingredients.bun.price}
             thumbnail={ingredients.bun.image}
+            extraClass="ml-8"
           />
-          <div className="mt-10">
+          <div className={clsx("mt-10 mr-4", styles.summary)}>
             <span className="text text_type_digits-medium mr-10">{getOrderSum()} <CurrencyIcon type="primary" /></span>
             <Button htmlType="button" type="primary" size="large" onClick={createOrder}>
               Оформить

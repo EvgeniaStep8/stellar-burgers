@@ -10,7 +10,7 @@
     width: 80px;
     height: 80px;
     margin: auto;
-    border: 3px solid #8585AD;
+    border: 3px solid var(--text-inactive-color);
     border-radius: 50%;
     display: inline-block;
     position: relative;
@@ -28,7 +28,7 @@
     height: 90px;
     border-radius: 50%;
     border: 3px solid;
-    border-color: #4c4cff transparent;
+    border-color: var(--colors-interface-accent) transparent;
   }
   
   @keyframes rotation {

@@ -10,17 +10,17 @@ export const Header = () => {
                 <div className={styles.headerItems}>
                     <button className={clsx(styles.item, 'mr-5')}>
                         <BurgerIcon type='primary'/>
-                        <p className={clsx('ml-2', styles.itemName, styles.active)}>Конструктор</p>
+                        <p className='ml-2 text text_type_main-default'>Конструктор</p>
                     </button>
                     <button className={clsx(styles.item, 'ml-2')}>
                         <ListIcon type="secondary" />
-                        <p className={clsx('ml-2', styles.itemName)}>Лента заказов</p>
+                        <p className='ml-2 text text_type_main-default text_color_inactive'>Лента заказов</p>
                     </button>
                 </div>
                 <Logo />
                 <button className={clsx(styles.item, 'ml-2')}>
                     <ProfileIcon type="secondary" />
-                    <p className={clsx('ml-2', styles.itemName)}>Личный кабинет</p>
+                    <p className='ml-2 text text_type_main-default text_color_inactive'>Личный кабинет</p>
                 </button>
             </div>
         </header>
