@@ -37,7 +37,8 @@ export const BurgerIngredient: FC<BurgerIngredientProps> = ({ name, image, large
             <span className="text text_type_digits-default">{price} <CurrencyIcon type="primary" /></span>
             <h3 className="text text_type_main-default">{name}</h3>
             <Counter count={1} size="default" extraClass="m-1" />
-            {isOpenModal && (<Modal title='Детали ингредиента' isOpen={isOpenModal} onClose={closeModal}>
+            {isOpenModal && (
+                <Modal title='Детали ингредиента' isOpen={isOpenModal} onClose={closeModal}>
 				    <div className={styles.details}>
                         <img src={largeImage} alt={name} className={clsx('mb-4', styles.img)}/>
                         <h3 className="text text_type_main-medium mb-8">{name}</h3>
