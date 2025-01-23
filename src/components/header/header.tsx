@@ -17,7 +17,7 @@ export const Header = () => {
                         <p className='ml-2 text text_type_main-default text_color_inactive'>Лента заказов</p>
                     </button>
                 </div>
-                <Logo />
+                <Logo className={styles.logo} />
                 <button className={clsx(styles.item, 'ml-2')}>
                     <ProfileIcon type="secondary" />
                     <p className='ml-2 text text_type_main-default text_color_inactive'>Личный кабинет</p>
