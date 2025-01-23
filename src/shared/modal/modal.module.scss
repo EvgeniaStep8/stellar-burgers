@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    z-index: 100;
+    position: relative;
+    width: 720px;
+    background: #1C1C21;
+    border-radius: 30px;
+}
+
+.btn {
+    position: absolute;
+    top: 45px;
+    right: 40px;
+}

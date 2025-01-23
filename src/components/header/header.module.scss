@@ -1,0 +1,27 @@
+.header {
+    background-color: #1C1C21;
+}
+
+.headerContainer {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerItems {
+    display: flex;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.itemName {
+    color: #8585AD;
+}
+
+.active {
+    color: #F2F2F3;
+}

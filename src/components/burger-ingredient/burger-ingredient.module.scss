@@ -1,0 +1,25 @@
+.burgerIngredient {
+    position: relative;
+    width: 208px;
+    cursor: pointer;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    width: 520px;
+    height: 240px;
+}
+
+.info {
+    display: flex;
+}
+
+.infoItem {
+    text-align: center;
+    color: #8585ad;
+}
