@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useState, useEffect } from 'react';
 import styles from './app.module.scss';
-import { AppHeader } from '../components/header/app-header';
+import { AppHeader } from '../components/app-header/app-header';
 import { BurgerIngredients } from '../components/burger-ingredients/burger-ingredients';
 import { Preloader } from '../shared/preloader/preloader';
 import { BurgerIngredientType } from '../shared/types';
