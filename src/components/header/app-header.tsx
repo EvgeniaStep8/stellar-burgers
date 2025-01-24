@@ -1,9 +1,9 @@
 import clsx from 'clsx';
-import styles from './header.module.scss';
+import styles from './app-header.module.scss';
 import { Logo } from '@ya.praktikum/react-developer-burger-ui-components';
 import { BurgerIcon, ListIcon, ProfileIcon } from '@ya.praktikum/react-developer-burger-ui-components';
 
-export const Header = () => {
+export const AppHeader = () => {
 	return (
 		<header className={clsx('pt-4', 'pb-4', styles.header)}>
             <div className={styles.headerContainer}>

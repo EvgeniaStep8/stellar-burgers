@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useState, useEffect } from 'react';
 import styles from './app.module.scss';
-import { Header } from '../components/header/header';
+import { AppHeader } from '../components/header/app-header';
 import { BurgerIngredients } from '../components/burger-ingredients/burger-ingredients';
 import { Preloader } from '../shared/preloader/preloader';
 import { BurgerIngredientType } from '../shared/types';
@@ -9,7 +9,6 @@ import { BurgerConstructor } from '../components/burger-constructor/burger-const
 import { burgerAddedIngredients } from '../constans/constants';
 
 const BASE_URL = 'https://norma.nomoreparties.space/api/ingredients';
-
 
 export const App = () => {
 	const [burgerIngredients, setBurgerIngredients] = useState<BurgerIngredientType[] | null>(null);
@@ -27,7 +26,7 @@ export const App = () => {
 		isLoading ? 
 		(<Preloader/>) :
 		(<div className={clsx(styles.page, 'p-10')}>
-			<Header />
+			<AppHeader/>
 			<main className={styles.main}>
 				<h1 className={clsx('mt-10', 'mb-5', 'text', 'text_type_main-large')}>Соберите бургер</h1>
 				<div className={styles.container}>
