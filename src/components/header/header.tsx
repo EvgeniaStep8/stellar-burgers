@@ -13,13 +13,13 @@ export const Header = () => {
                         <p className='ml-2 text text_type_main-default'>Конструктор</p>
                     </button>
                     <button className={clsx(styles.item, 'ml-2')}>
-                        <ListIcon type="secondary" />
+                        <ListIcon type='secondary' />
                         <p className='ml-2 text text_type_main-default text_color_inactive'>Лента заказов</p>
                     </button>
                 </div>
                 <Logo className={styles.logo} />
                 <button className={clsx(styles.item, 'ml-2')}>
-                    <ProfileIcon type="secondary" />
+                    <ProfileIcon type='secondary' />
                     <p className='ml-2 text text_type_main-default text_color_inactive'>Личный кабинет</p>
                 </button>
             </div>

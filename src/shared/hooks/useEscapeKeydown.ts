@@ -1,17 +1,17 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 const useEscapeKeydown = (close: () => void, isOpen: boolean): void => {
   useEffect(() => {
     const handleEscapeClose = (event: KeyboardEvent): void => {
-      if (event.key === "Escape") {
+      if (event.key === 'Escape') {
         close();
       }
     };
 
     if (isOpen) {
-      document.addEventListener("keydown", handleEscapeClose);
+      document.addEventListener('keydown', handleEscapeClose);
       return () => {
-        document.removeEventListener("keydown", handleEscapeClose);
+        document.removeEventListener('keydown', handleEscapeClose);
       };
     }
   }, [close, isOpen]);

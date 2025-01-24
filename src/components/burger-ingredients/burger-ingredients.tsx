@@ -14,14 +14,14 @@ export const BurgerIngredients: FC<BurgerIngredientsProps> = ({ ingredients }) =
 
     const getIngredientsByType = (type: string) =>  {
         return ingredients.filter((item) => item.type === type);
-    }
+    };
 
 	return (
 		<div className={clsx(styles.burgerIngredients, 'mr-10')}>
             <nav className={clsx(styles.nav, 'mb-10')}>
-                <Tab value="bun" active={current === 'bun'} onClick={setCurrent}>Булки</Tab>
-                <Tab value="sauce" active={current === 'sauce'} onClick={setCurrent}>Соусы</Tab>
-                <Tab value="main" active={current === 'main'} onClick={setCurrent}>Начинки</Tab>
+                <Tab value='bun' active={current === 'bun'} onClick={setCurrent}>Булки</Tab>
+                <Tab value='sauce' active={current === 'sauce'} onClick={setCurrent}>Соусы</Tab>
+                <Tab value='main' active={current === 'main'} onClick={setCurrent}>Начинки</Tab>
             </nav>
             <div className={styles.container}>
                 <section>
@@ -40,7 +40,7 @@ export const BurgerIngredients: FC<BurgerIngredientsProps> = ({ ingredients }) =
                                 proteins={item.proteins}
                                 fat={item.fat}
                             />);
-                        })};
+                        })}
                     </div>
                 </section>
                 <section>
@@ -59,7 +59,7 @@ export const BurgerIngredients: FC<BurgerIngredientsProps> = ({ ingredients }) =
                                 proteins={item.proteins}
                                 fat={item.fat}
                             />);
-                        })};
+                        })}
                     </div>
                 </section>
                 <section>
@@ -78,7 +78,7 @@ export const BurgerIngredients: FC<BurgerIngredientsProps> = ({ ingredients }) =
                                 proteins={item.proteins}
                                 fat={item.fat}
                             />);
-                        })};
+                        })}
                     </div>
                 </section>
             </div>
