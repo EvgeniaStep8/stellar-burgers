@@ -1,0 +1,31 @@
+.burgerIngredients {
+    flex: 1 0 0;
+}
+
+.nav {
+    display: flex;
+}
+
+.btn {
+    flex: 1 0 0;
+    border-bottom: 2px solid var(--background-element);
+    color: var(--text-inactive-color);
+    
+}
+
+.active {
+    border-bottom: 2px solid var(--colors-interface-accent);
+    color: #F2F2F3;
+}
+
+.container {
+    height: 600px;
+    overflow-y: auto;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 24px;
+}
