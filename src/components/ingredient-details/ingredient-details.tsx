@@ -9,9 +9,9 @@ type IngredientDetailsProps = {
     proteins: number,
     carbohydrates: number,
     fat: number,
-}
+};
 
-export const IngredientDetails: FC<IngredientDetailsProps> = ({ image, name, calories, proteins, carbohydrates, fat}) => {
+export const IngredientDetails: FC<IngredientDetailsProps> = ({ image, name, calories, proteins, carbohydrates, fat }) => {
     return (
         <div className={styles.details}>
             <img src={image} alt={name} className={clsx('mb-4', styles.img)}/>
@@ -34,6 +34,6 @@ export const IngredientDetails: FC<IngredientDetailsProps> = ({ image, name, cal
                     <p>{carbohydrates}</p>
                 </li>
             </ul>
-        </div>                
+        </div>
     );
 };

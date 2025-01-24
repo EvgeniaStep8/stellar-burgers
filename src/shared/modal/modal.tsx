@@ -12,7 +12,7 @@ type ModalProps = {
     isOpen: boolean;
     onClose: () => void;
     children: ReactElement;
-}
+};
 
 export const Modal: FC<ModalProps> = ({ title, children, isOpen, onClose }) => {
     if (!modalRoot) {

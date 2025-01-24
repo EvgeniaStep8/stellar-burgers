@@ -7,7 +7,7 @@ import { Tab } from '@ya.praktikum/react-developer-burger-ui-components';
 
 type BurgerIngredientsProps = {
     ingredients: BurgerIngredientType[];
-}
+};
 
 export const BurgerIngredients: FC<BurgerIngredientsProps> = ({ ingredients }) => {
     const [current, setCurrent] = useState('bun');
@@ -29,7 +29,7 @@ export const BurgerIngredients: FC<BurgerIngredientsProps> = ({ ingredients }) =
                     <div className={clsx(styles.gridContainer, 'mb-10')}>
                         {getIngredientsByType('bun').map((item) => {
                             return (
-                            <BurgerIngredient 
+                            <BurgerIngredient
                                 key={item._id}
                                 name={item.name}
                                 image={item.image}
@@ -48,7 +48,7 @@ export const BurgerIngredients: FC<BurgerIngredientsProps> = ({ ingredients }) =
                     <div className={clsx(styles.gridContainer, 'mb-10')}>
                         {getIngredientsByType('sauce').map((item) => {
                             return (
-                            <BurgerIngredient 
+                            <BurgerIngredient
                                 key={item._id}
                                 name={item.name}
                                 image={item.image}
@@ -67,7 +67,7 @@ export const BurgerIngredients: FC<BurgerIngredientsProps> = ({ ingredients }) =
                     <div className={clsx(styles.gridContainer, 'mb-10')}>
                     {getIngredientsByType('main').map((item) => {
                             return (
-                            <BurgerIngredient 
+                            <BurgerIngredient
                                 key={item._id}
                                 name={item.name}
                                 image={item.image}

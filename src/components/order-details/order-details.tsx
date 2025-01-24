@@ -5,7 +5,7 @@ import doneIcon from '../../images/done.svg';
 
 type OrderDetailsProps = {
     id: string;
-}
+};
 
 export const OrderDetails: FC<OrderDetailsProps> = ({ id }) => {
     return (

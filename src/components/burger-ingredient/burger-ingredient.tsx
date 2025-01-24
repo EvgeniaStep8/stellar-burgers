@@ -16,10 +16,10 @@ type BurgerIngredientProps = {
     carbohydrates: number;
     proteins: number;
     fat: number;
-}
+};
 
 
-export const BurgerIngredient: FC<BurgerIngredientProps> = ({ name, image, largeImage, price, calories, carbohydrates, proteins, fat}) => {
+export const BurgerIngredient: FC<BurgerIngredientProps> = ({ name, image, largeImage, price, calories, carbohydrates, proteins, fat }) => {
     const [ isOpenModal, setOpenModal ] = useState(false);
 
     const closeModal = () => {
@@ -40,7 +40,7 @@ export const BurgerIngredient: FC<BurgerIngredientProps> = ({ name, image, large
             <Counter count={1} size='default' extraClass='m-1' />
             {isOpenModal && (
                 <Modal title='Детали ингредиента' isOpen={isOpenModal} onClose={closeModal}>
-				    <IngredientDetails 
+				    <IngredientDetails
                         name={name}
                         image={largeImage}
                         calories={calories}

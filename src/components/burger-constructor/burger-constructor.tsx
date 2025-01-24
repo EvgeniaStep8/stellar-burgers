@@ -8,7 +8,7 @@ import { OrderDetails } from '../order-details/order-details';
 
 type BurgerConstructorProps = {
   ingredients: BurgerAddedIngredientsType;
-}
+};
 
 export const BurgerConstructor: FC<BurgerConstructorProps>  = ({ ingredients }) => {
     const [ isOpenModal, setOpenModal ] = useState(false);
@@ -74,5 +74,5 @@ export const BurgerConstructor: FC<BurgerConstructorProps>  = ({ ingredients }) 
           )}
         </div>
     );
-    
+
 };

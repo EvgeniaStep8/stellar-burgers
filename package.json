@@ -4,6 +4,8 @@
 	"main": "index.js",
 	"license": "MIT",
 	"devDependencies": {
+		"@eslint/js": "^9.18.0",
+		"@stylistic/eslint-plugin": "^2.8.0",
 		"@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
 		"@svgr/webpack": "^8.0.1",
 		"@types/react": "^18.3.18",
@@ -17,14 +19,15 @@
 		"css-loader": "^6.8.1",
 		"cssnano": "^6.0.1",
 		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^8.42.0",
+		"eslint": "^8.57.1",
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-eslint-comments": "^3.2.0",
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-jsx-a11y": "^6.7.1",
 		"eslint-plugin-prettier": "^4.2.1",
-		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react": "^7.37.4",
 		"eslint-plugin-react-hooks": "^4.6.0",
+		"globals": "^15.14.0",
 		"html-webpack-plugin": "^5.5.1",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.2.2",
@@ -41,6 +44,7 @@
 		"stylelint-order": "^6.0.3",
 		"ts-loader": "^9.4.3",
 		"typescript": "^5.0.4",
+		"typescript-eslint": "^8.21.0",
 		"typescript-plugin-css-modules": "^5.0.1",
 		"url-loader": "^4.1.1",
 		"webpack": "^5.81.0",
@@ -50,8 +54,6 @@
 	"scripts": {
 		"build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.js --env env=prod",
 		"start": "webpack serve --config webpack/webpack.config.js --env env=dev",
-		"stylelint": "stylelint \"src/**/*.css\"",
-		"stylelint:fix": "stylelint \"src/**/*.css\" --fix",
 		"lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
 		"format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --ignore-path ./.prettierignore",
 		"test": "yarn stylelint:fix && yarn lint && yarn format",
@@ -64,11 +66,6 @@
 		"core-js": "^3.38.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
-	},
-	"lint-staged": {
-		"*.{css,scss}": "yarn stylelint:fix",
-		"*.{js,jsx,ts,tsx}": "yarn lint",
-		"*.{js,jsx,ts,tsx,json,css,scss,md}": "yarn format"
 	},
 	"config": {
 		"commitizen": {

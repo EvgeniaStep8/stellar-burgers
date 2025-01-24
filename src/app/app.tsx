@@ -23,7 +23,7 @@ export const App = () => {
 	}, []);
 
 	return (
-		isLoading ? 
+		isLoading ?
 		(<Preloader/>) :
 		(<div className={clsx(styles.page, 'p-10')}>
 			<AppHeader/>

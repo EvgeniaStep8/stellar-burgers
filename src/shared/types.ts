@@ -11,9 +11,9 @@ export type BurgerIngredientType = {
     image_mobile: string,
     image_large: string,
     '__v': number
-}
+};
 
 export type BurgerAddedIngredientsType = {
     bun: BurgerIngredientType,
     filling: BurgerIngredientType[]
-}
+};
